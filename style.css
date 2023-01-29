@@ -69,6 +69,8 @@
   background-color: var(--ndtvdb1);
 }
 .dark .top {
+  box-shadow: 0 0 0 100vmax var(--ndtvdb2);
+  clip-path: inset(0 -100vmax);
   background-color: var(--ndtvdb2);
 }
 .dark .card {
@@ -103,6 +105,8 @@
   background-color: var(--nltw);
 }
 .light .top {
+  box-shadow: 0 0 0 100vmax var(--nltvpb);
+  clip-path: inset(0 -100vmax);
   background-color: var(--nltvpb);
 }
 .light .card {
@@ -193,6 +197,10 @@ input[type="checkbox"]:checked::before {
 /* HEADER */
 
 .header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 80%;
   padding: 32px 0;
 
   display: flex;
@@ -218,8 +226,15 @@ input[type="checkbox"]:checked::before {
 }
 
 /* SECTION MAIN SOCIAL MEDIA STATS */
+
+.section.section-main-social-media-stats.grid-container {
+  padding-top: 136px;
+  margin: 0;
+}
+
 .section-main-social-media-stats {
   width: 100%;
+  height: auto;
 }
 
 .main-social-media-card {
@@ -295,8 +310,41 @@ input[type="checkbox"]:checked::before {
   color: var(--plg);
 }
 
-.card-update-up > .material-symbols-outlined {
+.card-update-up .material-symbols-outlined::before {
   content: "arrow_drop_up";
+}
+
+.card-update-down {
+  color: var(--pbr);
+}
+
+.card-update-down > .material-symbols-outlined::before {
+  content: "arrow_drop_down";
+}
+
+/* SECTION OVERVIEW */
+
+.overview-card {
+  position: relative;
+  padding: 24px;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 30px;
+  border-radius: 5px;
+}
+
+.overview-card-grid-item {
+  display: flex;
+}
+
+.overview-card-grid-item:nth-child(1),
+.overview-card-grid-item:nth-child(3) {
+  justify-content: flex-start;
+}
+
+.overview-card-grid-item:nth-child(2),
+.overview-card-grid-item:nth-child(4) {
+  justify-content: flex-end;
 }
 
 .grid-container {
@@ -304,4 +352,26 @@ input[type="checkbox"]:checked::before {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
   gap: 30px;
+  margin: 30px 0;
+}
+
+section.section {
+  padding: 46px 0;
+}
+
+@media only screen and (max-width: 691px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .dark-mode-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section.section-main-social-media-stats.grid-container {
+    padding-top: calc(136px + 15px);
+  }
 }

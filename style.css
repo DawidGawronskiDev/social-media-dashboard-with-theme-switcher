@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  /* Lime Green  */
+  --plg: hsl(163, 72%, 41%);
+  /* Bright Red  */
+  --pbr: hsl(356, 69%, 56%);
+  /* Facebook  */
+  --pfb: hsl(208, 92%, 53%);
+  /* Twitter  */
+  --ptw: hsl(203, 89%, 53%);
+  /* Instagram  */
+  --pig1: hsl(37, 97%, 70%);
+  --pig2: hsl(329, 70%, 58%);
+  /* YouTube  */
+  --pyt: hsl(348, 97%, 39%);
+
+  /* Dark Theme */
+  --dtt1: hsl(210, 78%, 56%);
+  --dtt2: hsl(146, 68%, 55%);
+
+  /* Light Theme */
+  --ltt: hsl(230, 22%, 74%);
+
+  /* Neutral */
+
+  /* Dark Theme */
+
+  /* Very Dark Blue (BG) */
+  --ndtvdb1: hsl(230, 17%, 14%);
+  /* Very Dark Blue (Top BG Pattern) */
+  --ndtvdb2: hsl(232, 19%, 15%);
+  /* Dark Desaturated Blue (Card BG) */
+  --ndtddb: hsl(228, 28%, 20%);
+  /* Desaturated Blue (Text) */
+  --ndtdb: hsl(228, 34%, 66%);
+  /* White (Text) */
+  --ndtw: hsl(0, 0%, 100%);
+
+  /* Light Theme */
+
+  /* White (BG) */
+  --nltw: hsl(0, 0%, 100%);
+  /* Very Pale Blue (Top BG Pattern) */
+  --nltvpb: hsl(225, 100%, 98%);
+  /* Light Grayish Blue (Card BG) */
+  --nltlgb: hsl(227, 47%, 96%);
+  /* Dark Grayish Blue (Text) */
+  --nltdgb: hsl(228, 12%, 44%);
+  /* Very Dark Blue (Text) */
+  --nltvdb: hsl(230, 17%, 14%);
+
+  /* Body Copy */
+  --bs: 14px;
+
+  /* Font */
+  --ff: "Inter", sans-serif;
+
+  /* Weights */
+  --fw400: 400;
+  --fw700: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .main {
+    background-color: var(--ndtvdb1);
+  }
+  .top {
+    background-color: var(--ndtvdb2);
+  }
+  .card {
+    background-color: var(--ndtddb);
+  }
+  .text-1 {
+    color: var(--ndtdb);
+  }
+  .text-2 {
+    color: var(--ndtw);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .main {
+    background-color: var(--nltw);
+  }
+  .top {
+    background-color: var(--nltvpb);
+  }
+  .card {
+    background-color: var(--nltlgb);
+  }
+  .text-1 {
+    color: var(--nltvdb);
+  }
+  .text-2 {
+    color: var(--nltdgb);
+  }
+}

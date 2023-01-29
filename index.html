@@ -12,17 +12,103 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     <title>Frontend Mentor | [Challenge Name Here]</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="meyerreset.css" />
   </head>
   <body>
-    <!-- Social Media Dashboard
-  Total Followers: 23,004
+    <main class="main">
+      <header class="header top">
+        <div class="header-title">
+          <span class="header-title-1 text-1 fw700"
+            >Social Media Dashboard</span
+          >
+          <span class="header-title-2 text-2 fw700"
+            >Total Followers: 23,004</span
+          >
+        </div>
+        <div class="dark-mode-toggle">
+          <span class="dark-mode text-1 fw700">Dark Mode</span>
+          <input
+            type="checkbox"
+            id="darkModeInput"
+            onclick="darkModeSwitch()"
+          />
+        </div>
+      </header>
 
-  Dark Mode
+      <section class="section-main-social-media-stats grid-container">
+        <div class="card main-social-media-card grid-container-item">
+          <div class="card-title fw700">
+            <img src="images/icon-facebook.svg" alt="Facebook" />
+            <span class="text-2">@nathanf</span>
+          </div>
+          <div class="card-followers-stats">
+            <span class="followers-number text-1 fw700">1987</span>
+            <span class="text-2 followers-text">FOLLOWERS</span>
+          </div>
+          <div class="card-update-stats">
+            <div class="card-update card-update-up fw700">
+              <span class="material-symbols-outlined"></span>12 Today
+            </div>
+          </div>
+        </div>
 
-  
+        <div class="card main-social-media-card grid-container-item">
+          <div class="card-title fw700">
+            <img src="images/icon-twitter.svg" alt="Twitter" />
+            <span class="text-2">@nathanf</span>
+          </div>
+          <div class="card-followers-stats">
+            <span class="followers-number text-1 fw700">1044</span>
+            <span class="text-2 followers-text">FOLLOWERS</span>
+          </div>
+          <div class="card-update-stats">
+            <div class="card-update card-update-up fw700">
+              <span class="material-symbols-outlined"></span>99 Today
+            </div>
+          </div>
+        </div>
 
+        <div class="card main-social-media-card grid-container-item">
+          <div class="card-title fw700">
+            <img src="images/icon-instagram.svg" alt="Instagram" />
+            <span class="text-2">@realnathanf</span>
+          </div>
+          <div class="card-followers-stats">
+            <span class="followers-number text-1 fw700">11k</span>
+            <span class="text-2 followers-text">FOLLOWERS</span>
+          </div>
+          <div class="card-update-stats">
+            <div class="card-update card-update-up fw700">
+              <span class="material-symbols-outlined"></span>1099 Today
+            </div>
+          </div>
+        </div>
+
+        <div class="card main-social-media-card grid-container-item">
+          <div class="card-title fw700">
+            <img src="images/icon-youtube.svg" alt="Youtube" />
+            <span class="text-2">Nathan F.</span>
+          </div>
+          <div class="card-followers-stats">
+            <span class="followers-number text-1 fw700">8239</span>
+            <span class="text-2 followers-text">FOLLOWERS</span>
+          </div>
+          <div class="card-update-stats">
+            <div class="card-update card-update-up fw700">
+              <span class="material-symbols-outlined"></span>144 Today
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--
   @nathanf
   1987
   Followers

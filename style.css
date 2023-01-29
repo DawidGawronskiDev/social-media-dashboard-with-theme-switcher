@@ -65,6 +65,10 @@
   --fw700: 700;
 }
 
+* {
+  /* outline: 1px solid red; */
+}
+
 @media (prefers-color-scheme: dark) {
   .main {
     background-color: var(--ndtvdb1);
@@ -76,10 +80,10 @@
     background-color: var(--ndtddb);
   }
   .text-1 {
-    color: var(--ndtdb);
+    color: var(--ndtw);
   }
   .text-2 {
-    color: var(--ndtw);
+    color: var(--ndtdb);
   }
 }
 
@@ -99,4 +103,135 @@
   .text-2 {
     color: var(--nltdgb);
   }
+}
+
+.main {
+  padding: 0 10%;
+  min-height: 100vh;
+  font-weight: 400;
+  font-family: var(--ff);
+}
+
+.fw400 {
+  font-weight: var(--fw400);
+}
+
+.fw700 {
+  font-weight: var(--fw700);
+}
+
+/* HEADER */
+
+.header {
+  padding: 32px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title-1 {
+  font-size: 28px;
+}
+
+.header-title-2 {
+  font-size: 14px;
+}
+
+.dark-mode {
+  font-size: 14px;
+}
+
+/* SECTION MAIN SOCIAL MEDIA STATS */
+.section-main-social-media-stats {
+  width: 100%;
+}
+
+.main-social-media-card {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  text-align: center;
+  padding: 32px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main-social-media-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: currentColor;
+}
+
+.main-social-media-card:nth-child(1)::before {
+  color: var(--pfb);
+}
+
+.main-social-media-card:nth-child(2)::before {
+  color: var(--ptw);
+}
+
+.main-social-media-card:nth-child(3)::before {
+  background: linear-gradient(to right, var(--pig1), var(--pig2));
+}
+
+.main-social-media-card:nth-child(4)::before {
+  color: var(--pyt);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.card-followers-stats {
+  display: grid;
+  gap: 9px;
+}
+
+.followers-number {
+  font-size: 56px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+.followers-text {
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.card-update {
+  font-size: 12px;
+  color: currentColor;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-update-up {
+  color: var(--plg);
+}
+
+.card-update-up > .material-symbols-outlined {
+  content: "arrow_drop_up";
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 30px;
 }

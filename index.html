@@ -20,8 +20,9 @@
     <title>Frontend Mentor | [Challenge Name Here]</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="meyerreset.css" />
+    <script src="./themeSwitch.js" defer></script>
   </head>
-  <body>
+  <body class="dark">
     <main class="main">
       <header class="header top">
         <div class="header-title">
@@ -34,11 +35,7 @@
         </div>
         <div class="dark-mode-toggle">
           <span class="dark-mode text-1 fw700">Dark Mode</span>
-          <input
-            type="checkbox"
-            id="darkModeInput"
-            onclick="darkModeSwitch()"
-          />
+          <input type="checkbox" id="themeToggle" class="dark-mode-input" />
         </div>
       </header>
 
